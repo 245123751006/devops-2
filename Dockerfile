@@ -1,9 +1,5 @@
-FROM gcc:latest
+FROM nginx:latest
 
-WORKDIR /app
+COPY index.html /usr/share/nginx/html/index.html
 
-COPY hello.c .
-
-RUN gcc hello.c -o hello
-
-CMD ["./hello"]
+EXPOSE 80
