@@ -1,7 +1,7 @@
-FROM python:3.12
+FROM node:alpine
 
 WORKDIR /app
 
-COPY app.py .
+COPY app.js .
 
-CMD ["python", "app.py"]
+CMD ["node", "app.js"]
